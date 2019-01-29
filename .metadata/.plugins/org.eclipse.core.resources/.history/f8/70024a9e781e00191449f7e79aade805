@@ -1,0 +1,189 @@
+package coreJava;
+
+//public class NonStaticExample {
+//	
+//	int eid=7279;
+//	String ename="harikrishna";
+//	String company="Nraesh it ";
+//	
+//
+//	public static void main(String[] args) {
+//		// TODO Auto-generated method stub
+//
+//		NonStaticExample e=new NonStaticExample();
+//		System.out.println(e);
+//	}
+//
+//}
+
+
+//public class NonStaticExample
+//{
+//	int eid=7279;
+//	String ename="harikrishna";
+//	String company="Naresh it";
+//	
+//	public static void main(String[] arges)
+//	{
+//		NonStaticExample e=new NonStaticExample();
+//		System.out.println(e.eid);
+//		System.out.println(e.ename);
+//		System.out.println(e.company);
+//	}
+//}
+
+//public class NonStaticExample {
+//
+//int eid=7279;
+//String ename="harikrishna";
+//String company="naresh it";
+//
+//public String toString()
+//{
+//	return "eid:"+eid+"\n"+"ename:"+ename+"\n"+"company:"+company+"\n";
+//}
+//
+//public static void main(String[] arges)
+//
+//{
+//	NonStaticExample e=new NonStaticExample();
+//	System.out.println(e);
+//}
+//
+//
+//}
+
+
+
+//public class NonStaticExample
+//{
+//	int eid;
+//	String ename;
+//	String company;
+//	
+//	public String toString()
+//	{
+//		
+//		return "eid::"+eid+"\n"+"ename::"+ename+"\n"+"company::"+company;
+//	}
+//	
+//	public static void main(String[] arges)
+//	{
+//		NonStaticExample e=new NonStaticExample();
+//		e.eid=7279;
+//		e.ename="harikrishna";
+//		e.company="naresh it";
+//		
+//		System.out.println(e);
+//	}
+//}
+
+//public class NonStaticExample
+//{
+//	static int a=10;
+//	static int b=20;
+//	
+//	int x=30;
+//	int y=40;
+//	
+//	@Override
+//	public String toString()
+//	{
+//		return "x:"+x+"\n"+"y:"+y;
+//	}
+//	
+////	@Override
+////	public String toString()
+////	{
+////		return "a:"+a+"\n"+"b:"+b;
+////	}
+//	
+//	
+//	public static void main(String[] arges)
+//	{
+//		System.out.println("a:"+a); // we can access static variable directly by its name
+//		System.out.println("b"+b);
+//		
+//		System.out.println("a:"+NonStaticExample.a);//we can access static variable by ussing class name 
+//		System.out.println("b:"+NonStaticExample.b);
+//		
+//		NonStaticExample e=new NonStaticExample();
+//		System.out.println(e.a); // we  can access static variable by using object referneced variable
+//		System.out.println(e.b);
+//		
+//		System.out.println(e);//we are accessing non static variable by overriding non static method 
+//		
+//		//System.out.println("x:"+NonStaticExample.x);
+//		//System.out.println("y:"+NonStaticExample.y);
+//		
+//		NonStaticExample e1=null;
+//		System.out.println("a:"+e1.a);//we are accessing static vaaariaaable by using null refernced varibale
+//		System.out.println("b:"+e1.b);
+//		
+//	}
+//	
+//}
+
+//public class NonStaticExample
+//{
+//	void m1()
+//	{
+//		System.out.println("in m1 method");
+//	}
+//	public static void main(String[] arges)
+//	{
+//		System.out.println("in main method");
+//		//m1(); we cant accees non static method from main method bcz non static method gets memory location at time of objet craetion 
+//	
+//		NonStaticExample e=new NonStaticExample();
+//		e.m1();
+//	}
+//	
+//}
+
+//public class NonStaticExample
+//{
+//	int x=10;
+//	int y=20;
+//	
+//	void m1()
+//	{
+//		System.out.println("m1");
+//	}
+//	
+//	void printXY()
+//	{
+//		System.out.println(x);
+//		System.out.println(y);
+//		m1();
+//	}
+//	public static void main(String[] arges)
+//	{
+//		NonStaticExample e=new NonStaticExample();
+//		e.printXY();
+//	}
+//}
+
+public class NonStaticExample
+{
+	int x=10;
+	int y=20;
+	
+	public void  printXY()
+	{
+		System.out.println(x);
+		System.out.println(y);
+		
+		
+	}
+	
+	public static void main(String[] arges)
+	
+	{
+		NonStaticExample e=new NonStaticExample();//every object has its  own copy of non static variable 
+		//memory location and share same copy of non static method logic
+		e.printXY();
+		NonStaticExample e1=new NonStaticExample();
+		e1.printXY();
+	}
+}
