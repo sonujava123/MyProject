@@ -6,7 +6,7 @@ public class Example {
 	static int a= m1();
 	static int m1()
 	{
-		System.out.println("variable a is created ");
+		System.out.println("variable a is Static ");
 		return 10;
 	}
 	
